@@ -1,0 +1,12 @@
+body {
+    background-color: powderblue;
+}
+h6 {
+    color: green;
+}
+
+p6 {
+    border: 2px solid red;
+    padding: 10px;
+    color: rgb(80, 118, 106);
+}

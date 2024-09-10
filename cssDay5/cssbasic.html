@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>css</title>
+        <link rel="stylesheet" href="styles.css"> 
+        <style>
+            h1 {
+                text-align: center;
+                color: red;
+                color: hsl(0, 40%, 50%); /* This will overwrite the red color */
+            }
+        </style>
+
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <h1>Basics of CSS</h1>
+        <p>Started to learn the basics</p>
+        <div>
+            <ul>
+                <li id="a">Item one</li>
+                <li id="b">Item two</li>
+                <li id="c">Item three</li>
+            </ul>
+        </div>
+
+        <button onclick="goTo()"> click here</button>
+        <script>
+            function goTo(){
+                document.getElementById("b").style.color="initial";
+            }
+        </script>
+
+        <div>
+            <p style="width: 300px; border: 15px solid green; padding: 10px; margin: 20px 100px; text-align: center; outline: red solid 20px;">Test</p>
+            <p class="clr">created using class name</p>
+        </div>
+
+        <i class="fas fa-cloud" style="color: black; font-size: 30px;"></i>
+        
+    </body>
+
+    <div>
+        <h2>New Heading</h2>
+        <p>New Paragraph</p>
+    </div>
+
+    <div>
+        <h1 class="txtDecoration">one</h1>
+        <h2 class="txtDecoration">two</h2>
+        <h3 class="txtDecoration">three</h3>
+        <h4 class="txtDecoration">four</h4>
+    </div>
+
+
+</html>
