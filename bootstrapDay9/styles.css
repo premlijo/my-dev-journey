@@ -1,0 +1,14 @@
+#formula{
+    color: blue;
+    font-size: 100px;
+}
+
+#sec{
+    font-size: medium;
+}
+
+address{
+    font-style: normal;
+    line-height: inherit;
+    margin-bottom: 1rem;
+}
