@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <style>
+
+            /* To coment the CSS line inside the <style> element */
+            #header{
+                background-color: aqua;
+                color: black;
+                padding: 30px;
+                text-align: center;
+            }
+        </style>
+        <script>
+            function demoFunction() {
+                document.getElementById("demo").innerHTML="Hello Javascript!";
+            }
+        </script>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <button onclick="myFunction()"> Hide Elements</button>
+        <details>
+            <summary>To view the details of summary</summary>
+        <h1 class="city">London</h1>
+        <p>London is the capital of England</p>
+        <h1 class="city">Paris</h1>
+        <p>Paris is the capital of france</p>
+        <h1 class="city">Tokyo</h1>
+        <p>Tokyo is the capital of Japan</p>
+        </details>
+        <script>
+            function myFunction() {
+                var x= document.getElementsByClassName("city");
+                for(var i = 0; i < x.length; i++){
+                    x[i].style.display = "none";
+                }
+            }
+        </script>
+
+        <h2 id="header">id attribute</h2>
+
+        <iframe src="cat.jpeg" frameborder="10" style="height: 300;" name="iframe_a"> Iframe</iframe>
+        <p>
+            <a href="https://www.w3schools.com/html/html_iframe.asp" target="iframe_a"> W3 Schools</a>
+        </p>
+
+        <p id="demo"> A paragraph</p>
+        <button type="button" onclick="demoFunction()">Try</button>
+
+        <!--Responsive image-->
+
+        <img src="cat.jpeg" style="max-width: 100%;">
+
+        <!-- <kbd> element used to define keyboard input
+            The content inside display browsers default monospace font-->
+
+        <p>save the document by pressing <kbd>Ctrl + S</kbd></p>
+
+        <p>
+            Message from my computer:
+        </p>
+        <p> <!-- <samp> element is used to define sample output
+            The content inside display browsers default monospace font-->
+            <samp>File not found. <br>Press esc to continue</samp>
+        </p>
+
+        <code> <!-- <code> element The content inside is displayed in the browser's default monospace font -->
+            x = 5;
+            y =  10;
+            z = x + y;
+        </code>
+
+        <pre>
+            <code> <!-- Notice that the <code> element does not preserve extra whitespace and line-breaks.
+                To fix this, you can put the <code> element inside a <pre> element -->
+                x = 5;
+                y =  10;
+                z = x + y;
+            </code>
+        </pre>  
+
+        <p> the content inside var will display in italic 1/2 x <var>b</var> x <var>h</var></p>
+        <BODY>
+            <p style= "background-color: green"></p>
+            &lt;&gt;&#60;&#62;
+            &amp;
+            &quot;
+            &apos;
+            &cent;
+            &pound;
+            &yen;
+            &euro;
+            &copy;
+            &reg;
+            &trade;
+        </BODY>
+
+        <video width="400" controls>
+            <source src="mov_bbb.mp4" type="video/mp4" autoplay>
+            <source src="mov_bbb.ogg" type="video/ogg">
+        </video>
+
+        <p>
+            Video courtesy of
+            <a href="https://www.bigbuckbunny.org/"></a>
+        </p>
+
+        <iframe width="420" height="345" src="https://youtu.be/embed/QlWHxQ1zD3FHHOUG?autoplay=1&mute=1"></iframe>
+
+    </body>
+</html>
