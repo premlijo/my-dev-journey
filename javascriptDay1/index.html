@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Basics</title>
+    <link rel="icon" type="image/x-icon" href="./Images/Javascript.webp">
+    <script>
+
+        // Primitive datatypes
+
+            // Number
+            // String
+            // Boolean
+            // Null 
+            // Undefined 
+
+        var message;
+        message= 'Hello, Javascript!';
+        console.log(message);
+        console.log("Normal Program");
+
+        // Number
+
+        var age= 12;
+        var cgpa =7.4;
+        console.log(age);
+        console.log(cgpa);
+        var octalNum = 0o255;
+        var hexNum = 0xFF;
+        console.log(octalNum);
+        console.log(hexNum);
+        var exp = 1.1e6;
+        console.log(exp);
+        console.log(Number.MAX_VALUE);
+        console.log(Number.MIN_VALUE);
+        var mayBeInfinity = Number.MAX_VALUE + Number.MAX_VALUE;
+        var MayBeNegativeInfinity = -10/0;
+        console.log(mayBeInfinity);
+        console.log(MayBeNegativeInfinity);
+
+        // String
+        // we can use either ' ' or " " for the string
+
+        var shortName = 'prem';
+        var fullName = "Prem Lijo"
+        console.log(shortName);
+        console.log(fullName);
+
+        // Boolean
+
+        var yes = true;
+        var no = false;
+        console.log(yes);
+        console.log(no);
+
+        console.log(typeof yes);
+
+        // Null
+
+        var name = null;
+        console.log(name);
+
+        console.log(typeof name);
+
+        // undefined
+
+        var weird;
+        console.log(weird);
+
+        // Java script is loosely or weakly type language
+
+        // Reference Data Type
+
+                // Object 
+
+        var age = 40;
+        console.log(age);
+        console.log(typeof age);
+        age = "I'm neither young nor old"
+        console.log(age);
+        console.log(typeof age);
+
+        console.log(typeof mayBeInfinity);
+
+        // Arithmetic Opereators
+
+            // Addition 
+            // Subtraction
+            // Multiplication
+            // Division
+            // Modulus(Remainder)
+
+
+        var result = 10 + 20;
+        console.log(result);
+
+        result = result - 2;
+        console.log(result);
+
+        result = result * 2;
+        console.log(result);
+
+        result = result / 2;
+        console.log(result);
+
+        result = result % 2;
+        console.log(result);
+
+
+        result++;
+        console.log(result);
+
+        result--;
+        console.log(result);
+
+        ++result;
+        console.log(result);
+
+        --result;
+        console.log(result);
+
+        var lang = "Javascript"
+        console.log(lang + 101);
+
+        // This will return NaN means " Not a Number "
+        console.log(2019 - "sometext");
+
+
+        // Relational Operators
+
+        console.log('10 > 5 = ', 10 > 5);
+        console.log('10 < 8 = ', 10 < 8);
+
+        console.log('10 >= 15 = ', 10 >= 15);
+        console.log('10 <= 18 = ', 10 <= 18);
+        
+        console.log('15 == 15 = ', 15 == 15);
+        console.log('10 != 10 = ', 10 != 10);
+
+        // Used type conversion
+        console.log('15 == "15" = ', 15 == "15");
+        console.log('10 != "10" = ', 10 != "10");
+
+        // No need for type conversion
+        console.log('15 === "15" = ', 15 === "15");
+        console.log('10 !== "10" = ', 10 !== "10");
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
