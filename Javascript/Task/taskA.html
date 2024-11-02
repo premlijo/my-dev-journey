@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> JS Task</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Task - A</h1>
+
+
+    <script>
+
+                                    //Task-1
+
+
+        console.log([] + []);   // Strings - [] is used whenever we declare an empty array since there are nothing in the array js willl consider it as an empty string while concatenation. so that this wont throw an error.
+        console.log([] + {});   // object Object - {} is used whenever we declare an empty object. [] + {} empty string concatenated with empty object 
+        console.log({} + []);   // object Object
+        console.log({} + {});   // [object Object] [object Object]
+
+        
+                                    //Task - 2
+
+        function sumDigits(num)
+        {
+            let sum = 0;
+            num = Math.abs(num);
+            while(num > 0){
+                sum += num%10;
+                num = Math.floor(num / 10);
+            } 
+            return sum; 
+        }
+        console.log(sumDigits(1234));
+        console.log(sumDigits(-987));
+
+
+                                    //Task - 3
+
+    
+        function transformData(input)
+        {
+            const active = [];
+            for(let i = 0; i < input.length; i++){
+                const data = input[i];
+                if(data.isActive){
+                    let word = data.name.split(' ');
+                    for(let j = 0; j < word.length ; j++){
+                        word[j] = word[j].charAt(0).toUpperCase() + word[j].slice(1);
+                    }
+                    const fullname = word.join(' ');
+
+                    let totalscore = 0;
+                    for(let k = 0; k < data.scores.length; k++){
+                        totalscore += data.scores[k];
+                    }
+                    const avg = (totalscore / data.scores.length).toFixed(2);
+
+                    const isAdult = data.age >= 18;
+
+                    active.push({fullName: fullname, isAdult: isAdult, averageScore: avg});
+                }
+            }
+            return active;
+        }
+
+        const input = [
+        { name: "john doe", age: 25, isActive: true, scores: [78, 92, 85] },
+        { name: "jane smith", age: 16, isActive: true, scores: [88, 94, 90] },
+        { name: "samuel adams", age: 30, isActive: false, scores: [65, 70, 60] },
+        ];
+
+        const output = transformData(input);
+        console.log(output);
+
+
+    </script>
+</body>
+</html>

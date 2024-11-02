@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskB</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Task - B</h1>
+
+
+    <script>
+        
+                                        //Task - 1
+
+
+    for(var i = 0; i<5; i++){               //5 - var is a function scope. inside the setTimeout the function is created but not executed
+        setTimeout(function(){              //because the setTimeout is set to 1 sec. once all the iteration completes the setTimeout is triggered
+            console.log(i);                 //since the var is global variable after the execution this holds the value 5 and setTimeout will 
+        }, 1000);                           //print 5 in eash iteration.
+    }
+
+
+                                        //Task - 2
+
+
+    function flattenArray(nestedArray){
+        let flatArray =[];
+        function flatten(item)
+        {
+            for(let i = 0; i < item.length; i++)
+            {
+                if(Array.isArray(item[i])){
+                    flatten(item[i]);
+                }
+                else{
+                    flatArray.push(item[i]);
+                }
+            }
+        }
+        flatten(nestedArray);
+        return flatArray;
+    }
+    const nestedArray = [1, [2,3],[4,[5,6]]];
+    const result =flattenArray(nestedArray)
+    console.log(result);
+
+
+                                        //Task - 3
+
+
+    function validateandtransform(data)
+    {
+        if(typeof data.name !== 'string' || typeof data.age !== 'number' || !Array.isArray(data.hobbies) || typeof data.isActive !== 'boolean'){
+            return "Invalid input";
+        }
+        let trimmedname = data.name.trim();
+        let title = '';
+
+        let words = trimmedname.split(' ');
+        for(let i = 0; i<words.length; i++){
+            if(words[i]){
+                title += words[i].charAt(0).toUpperCase()+ words[i].slice(1).toLowerCase()+' ';
+            }
+        }
+        title = title.trim();
+
+        let filteredhobbies =[];
+        for(let i = 0; i< data.hobbies.length ;i++){
+            if(typeof data.hobbies[i] === 'string'){
+                filteredhobbies.push(data.hobbies[i]);
+            }
+        }
+
+        let reversehobbies = [];
+        for(let i = filteredhobbies.length - 1; i>=0;i--){
+            {
+                reversehobbies.push(filteredhobbies[i]);
+            }
+        }
+
+        let adjustage = data.age;
+        if(adjustage < 18){
+            adjustage = 18;
+        }
+        else if(adjustage > 100){
+            adjustage = 100;
+        }
+
+        let isActivestatus = adjustage < 60;
+
+        return {
+            name : title,
+            age: adjustage,
+            hobbies: reversehobbies,
+            isActive: isActivestatus
+        };
+    }
+
+
+    const userData = {
+        name: " john doe ",
+        age: 17,
+        hobbies: ["Reading", 123, "Gaming", true, "Traveling"],
+        isActive: false
+    };
+
+    const transformed = validateandtransform(userData);
+    console.log(transformed);
+    
+    </script>
+    
+</body>
+</html>

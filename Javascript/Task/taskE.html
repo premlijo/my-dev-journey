@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskE</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Task - E</h1>
+
+    <script>
+
+                                                //Task - 1
+
+/*
+    console.log(a);                 //Reference error - a is not defined when coming to console.log, let will cause the reference error.
+    let a = 10;
+
+    function test(){
+        console.log(b);             //undefined - because when calling the console,log the 'b' is not yet assigned, it wont shoot reference error because of var
+        var b = 20;
+
+        if(true){
+            let b = 30;
+            console.log(b);         //30 - this will print 30 because the 'b' is assigned before console.log
+        }
+        console.log(b);             //20 - this will print 30 because of the var in the block. there is only one var which is global
+    }
+
+    test();
+
+*/
+                                                //Task - 2
+
+
+    const key = [['m','c'], ['u','e'], ['b', 'g'], ['a', 'k'], ['s', 'v'], ['h', 'x'], ['i', 'z'], ['r', 'y'], ['p','w'], ['l','n'], ['o', 'j'], ['t', 'f'], ['q', 'd']];
+    
+    function decodeMessage(encoded){
+        let decoded= '';
+        for (const char of encoded){
+            for(const pair of key){
+                if(pair[0] === char){
+                decoded += pair[1];
+                break;
+                } 
+                else if (pair[1] === char){
+                decoded += pair[0];
+                break;
+                }
+            }
+        }
+        return decoded;
+    }
+
+    const encodedMessage = "kgcmu";
+    const ans = decodeMessage(encodedMessage);
+    console.log(ans);
+
+
+                                                //Task - 3
+
+
+    Array.prototype.myMap = function(arr, callback){
+        const result = [];
+        for(let i = 0; i< arr.length; i++){
+            if(i in arr){
+                result.push(callback(arr[i], i, arr));
+            }
+        }
+        return result;
+    }
+
+    const arr =[1, 2, 3, 4];
+    const result = arr.myMap(arr, num => num * 2);
+    console.log(result);
+
+    </script>
+    
+</body>
+</html>

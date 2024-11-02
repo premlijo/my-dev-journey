@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <script>
+        // alert('Hello, Javascript!');
+
+        // // prompt
+        // var name = prompt('What is your name?', 'Anonymous');
+        // alert('Hello, ' + name + '!');
+
+        // // confirm
+        // var response = confirm('I am okay with learning JS');
+        // alert(response);
+
+        var day = 7;
+
+        switch (day) {
+            case 1:
+                console.log('Monday');
+                break;
+            case 2:
+                console.log('Tue');
+                break;
+            case 3:
+                console.log('Wed');
+                break;
+            case 4:
+                console.log('Thurs');
+                break;
+            default:
+                console.log("No");
+        }
+
+        // Data property attribute
+                /*
+                [[Configurable]] - desides whether below 3 attributes need be configure or not
+                [[Enumerable]] - decide for in loop should be display
+                [[Writable]] - desides the value should be read only or writable
+                [[Value]] - store the actual value
+                */
+
+
+        var employee3 ={};
+        Object.defineProperty(employee3, 'name', {
+            configurable: true,
+            writable: false,
+            enumerable: true,
+            value: 'Lijo'
+        });
+        employee3.name = 'Prem';
+        console.log(employee3.name);
+
+        employee3.designation = "Developer";
+        employee3.salary = 50000;
+
+        for(prop in employee3)
+        {
+            console.log(prop, employee3[prop]);
+        }
+
+        // Accessor property
+                /* 
+                [[Get]]
+                [[Set]]
+                */
+
+        var employee5 = {
+            name : 'Lijo',
+            _bonus : 0,
+            yoj : 2010
+        };
+
+        Object.defineProperty(employee5, 'bonus', {
+            get: function(){
+                return this._bonus;
+            },
+            set : function(newBonus) {
+                if(newBonus <= 20 && this.yoj < 2015){
+                    this._bonus = newBonus;
+                }
+            }
+        });
+
+        employee5.bonus = 10;
+        console.log(employee5);
+
+        var avgMarkList = [10, 38, 20, 100, 99, 95];
+        function compare(a, b)
+        {
+            console.log('value1 : ', a);
+            console.log('value2 : ' , b);
+            if(a > b) {
+                return 1;
+            } else if (a < b) {
+                return -1;
+            }
+            else{
+                return 0;
+            }
+        }
+        avgMarkList.sort(compare);
+        console.log(avgMarkList);
+
+        // function descendingOrder(value1, value2){
+        //     if(value1 > value2) {
+        //         return 1;
+        //     } else if (value1 < value2) {
+        //         return -1;
+        //     }
+        //     else{
+        //         return 0;
+        //     }
+        // }
+
+        // avgMarkList.sort(descendingOrder);
+        // console.log(avgMarkList);
+
+        // function ascendingOrder(value1, value2)
+        // {
+        //     return value1 - value2;
+        // }
+
+        // avgMarkList.sort(ascendingOrder);
+        // console.log(avgMarkList);
+
+        var randomChar = ['b', 'a', 't', 'c', 't', 'a', 's', 'a', 't'];
+        var uniqueChar = randomChar.reduce(function(accumulator, currentvalue){
+            if (accumulator.indexOf(currentvalue) === -1) {
+                accumulator.push(currentvalue);
+            }
+            return accumulator;
+        }, []);
+
+        console.log(uniqueChar);
+
+            // IIFE Immediately Invoked function Expression
+
+        (function() {
+            var name = 'Lijo';
+            console.log(name);
+        })();
+
+        console.log(name);
+
+        (function sayName(name) {
+            console.log(name);
+        })("Javascript");
+
+        /*  
+            Math.max
+            Math.min
+            Math.round  6.1 should be return as 6
+            Math.ceil  6.1 or 6.9 this should return 7 
+            Math.floor  6.1 or 6.9 this should return 6
+            Math.random   return random values
+        */
+
+        /*
+        Primitive wraper type
+            String
+            Number
+            Boolean
+
+
+        */
+
+        var name = 'Javascript';
+        console.log(name.substring(0,3));
+
+        
+
+    </script>
+</head>
+<body>
+    <h1>Javascript Basics</h1>
+    <p>Hello <span>world!</span></p>
+    
+   <script src="./index.js" ></script>
+</body>
+</html>

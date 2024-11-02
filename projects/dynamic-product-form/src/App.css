@@ -1,0 +1,52 @@
+
+.App {
+  padding: 20px;
+}
+
+.App h1 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+input, textarea, select {
+  padding: 10px;
+  margin-top: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+table{
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+table td{
+  border: 1px solid black;
+  padding: 5px 10px;
+}
+
+table td:first-child{
+  font-weight: 600;
+}
+

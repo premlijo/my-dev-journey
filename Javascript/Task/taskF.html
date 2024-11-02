@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskF</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Task - F</h1>
+
+    <script>
+
+
+                                                    //Task - 1
+
+
+    const obj = {
+        name: "Mystery",
+        getName: function() {
+            return this.name;
+        }
+    };
+    const boundFunc = obj.getName.bind({name: "Bound"});
+    console.log(boundFunc());                                       //Bound - bind() method is used to prevent losing this, we are updating the name to Bound, now this.name holds Bound
+                                                                                        //when boundFunc() is called this inside getName is triggered and log the 'Bound'.
+    const obj2 = {
+        name: "Overridden",
+        getName: boundFunc
+    };
+    console.log(obj2.getName());                                    //Bound - getName is assigned to boundFunc which holds the name Bound. In obj2 name is given as "overridden"
+                                                                                        //but this in the getName is still be used because of the bind() method
+
+
+
+                                                    //Task - 2
+
+
+    function randomDate(startDate, endDate) {
+        const start = startDate.getTime();
+        const end = endDate.getTime();
+
+        const randomTime = Math.random() * (end - start) + start;
+        return new Date(randomTime);
+    }
+    console.log(randomDate(new Date('2020-01-01'), new Date('2020-12-31')));
+
+
+
+                                                    //Task - 3
+
+
+    function numToEng(n) {
+        if(n === 0) return "zero";
+
+        const ones = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
+        const teens = ["ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"];
+        const tens = ["","" , "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
+
+        let result = '';
+
+        if(n >= 100){
+            result +=ones[Math.floor(n / 100)] + " hundred";
+            n %= 100;
+            if(n > 0){
+                result += " ";
+            }
+        }
+        if(n >= 20) {
+            result += tens[Math.floor(n / 10)];
+            n %= 10;
+            if (n > 0){
+                result += " ";
+            }
+        }
+        else if(n >= 10) {
+            result += teens[n - 10];
+            n = 0;
+        }
+        if(n > 0){
+            result += ones[n];
+        }
+        return result.trim();
+    }
+
+    console.log(numToEng(0));
+    console.log(numToEng(5));
+    console.log(numToEng(25));
+    console.log(numToEng(101));
+
+    </script>
+    
+</body>
+</html>

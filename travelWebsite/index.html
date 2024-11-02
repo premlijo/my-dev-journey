@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Website</title>
+    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header card-header border-black">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" id="navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand text-white" href="#">Travel</a>
+                <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse navbar-dark" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                                aria-expanded="false">Tours</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Separated link</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                                aria-expanded="false">Flights</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Separated link</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                                aria-expanded="false">Hotel</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Separated link</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                                aria-expanded="false">Pages</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Separated link</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero text-center text-dark py-5">
+        <div class="container">
+            <h2>Explore the world together</h2>
+            <p>Find awesome flights, hotel, tour, car and packages</p>
+        </div>
+        <div class="form">
+            <div class="search-bar bg-light px-2 py-2 rounded">
+                <nav class="py-3 navbar nav-pills">
+                    <ul class="nav rounded">
+                        <li class="nav-item px-2">
+                            <a class="nav-link active" aria-current="page" href="#">Flights</a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <button class="nav-link border" href="#">Tours</button>
+                        </li>
+                        <li class="nav-item px-2">
+                            <button class="nav-link border" href="#">Hotel</button>
+                        </li>
+                    </ul>
+                </nav>
+                <form class="row py-3 g-5">
+                    <div class="col-md-3">
+                        <input type="text" class="form-control p-4" placeholder="From: Chennai Airport">
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" class="form-control p-4" placeholder="To: Coimbatore Airport">
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control p-4" placeholder="Journey Date: 21/09/2024">
+                    </div>
+                    <div class="col-md-2">
+                        <input type="text" class="form-control p-4" placeholder="5 Passenger, Business class">
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="offers py-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-md-5 py-5">
+                    <h2 style="color: blueviolet;">Go beyond your imagination</h2>
+                    <p>Discover your ideal experience with us</p>
+                </div>
+                <div class="col">
+                    <div class="card w-100 h-100">
+                        <img src="./Images/airlines.jpg" class="card-img" alt="image">
+                        <div class="card-body card-img-overlay d-flex align-items-end">
+                            <h5 class="card-title text-white text-center">Airlines</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card w-100 h-100">
+                        <img src="./Images/travel.jpg" class="card-img-top" alt="image">
+                        <div class="card-body card-img-overlay d-flex align-items-end">
+                            <h5 class="card-title text-white text-center">Travel</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card w-100 h-100">
+                        <img src="./Images/resort.jpg" class="card-img-top" alt="image">
+                        <div class="card-body card-img-overlay d-flex align-items-end">
+                            <h5 class="card-title text-white text-center">Resorts</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card h-100 w-100">
+                        <img src="./Images/package.jpg" class="card-img" alt="package">
+                        <div class="card-img-overlay">
+                            <p class="card-text text-white">Up to <br><strong style="font-size: 30px;">50%</strong> off
+                                <br>Holiday package
+                            </p>
+                            <div class="container">
+                                <div class="center">
+                                    <button type="submit" class="btn btn-primary rounded">Book now</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="card text-bg-dark ms-auto h-100 w-100">
+                                <img src="./Images/china.jpg" class="card-img" alt="china">
+                                <div class="card-img-overlay">
+                                    <p class="card-text text-white">CHINA</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="card text-bg-dark ms-auto h-100 w-100">
+                                <img src="./Images/thailand.jpg" class="card-img" alt="thailand">
+                                <div class="card-img-overlay">
+                                    <p class="card-text text-white">THAILAND</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="py-2">
+                        <h3 class="justify-content-center text-center rounded p-2 text-white"
+                            style="border: 2px solid; background-color: blueviolet;">Top Destinations</h3>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="card text-bg-dark ms-auto h-100 w-100">
+                                <img src="./Images/darjeeling.jpg" class="card-img" alt="dargeeling">
+                                <div class="card-img-overlay">
+                                    <p class="card-text text-white">DARJEELING</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="card text-bg-dark ms-auto h-100 w-100">
+                                <img src="./Images/kashmir.jpg" class="card-img" alt="kashmir">
+                                <div class="card-img-overlay">
+                                    <p class="card-text text-white">KASHMIR</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="text-center py-2" style="color: blueviolet;">Our Best Deals</h2>
+        <div class="container">
+            <nav class="navbar justify-content-center nav-pills">
+                <ul class="nav px-3 py-4 border rounded">
+                    <li class="nav-item px-2">
+                        <a class="nav-link active" aria-current="page" href="#">Hotels</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <button class="nav-link border" href="#">Tours</button>
+                    </li>
+                    <li class="nav-item px-2">
+                        <button class="nav-link border" href="#">Visa Processing</button>
+                    </li>
+                    <li class="nav-item px-2">
+                        <button class="nav-link border" href="#">Air Tickets</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <section>
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="card">
+                        <img src="./Images/shandonghotel.jpeg" class="card-img-top" alt="shandonghotel">
+                        <div class="card-body">
+                            <p class="card-text">Shandong Hotel, China</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <img src="./Images/bankokhotel.webp" class="card-img-top" alt="bankokhotel">
+                        <div class="card-body">
+                            <p class="card-text">Bankok Hotel, China</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <img src="./Images/kashmirhotel.jpg" class="card-img-top" alt="kashmirhotel">
+                        <div class="card-body">
+                            <p class="card-text">Kashmir Hotel, India</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row py-4">
+                <div class="col-sm-4">
+                    <div class="card">
+                        <img src="./Images/darjeelinghotel.webp" class="card-img-top" alt="darjeelinghotel">
+                        <div class="card-body">
+                            <p class="card-text">Darjeeling Hotel, India</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <img src="./Images/dubaihotel.avif" class="card-img-top" alt="dubaihotel">
+                        <div class="card-body">
+                            <p class="card-text">Dubai Hotel, UAE</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <img src="./Images/radissonhotel.webp" class="card-img-top" alt="radissonhotel">
+                        <div class="card-body">
+                            <p class="card-text">Radisson Hotel, Bangladesh</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="text-center py-2" style="color: blueviolet;">Our Special Tours</h2>
+        <div class="container">
+            <nav class="navbar justify-content-center nav-pills">
+                <ul class="nav px-3 py-4 border rounded">
+                    <li class="nav-item px-2">
+                        <a class="nav-link active" aria-current="page" href="#">Nepal</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <button class="nav-link border" href="#">Malaysia</button>
+                    </li>
+                    <li class="nav-item px-2">
+                        <button class="nav-link border" href="#">Indonesia</button>
+                    </li>
+                    <li class="nav-item px-2">
+                        <button class="nav-link border" href="#">Turkey</button>
+                    </li>
+                    <li class="nav-item px-2">
+                        <button class="nav-link border" href="#">Switzerland</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <section>
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-sm-4 col-md-4">
+                    <div class="card special">
+                        <img src="./Images/kathmundutour.webp" class="h-100 w-50" alt="kathmundutour">
+                        <div class="card-body">
+                            <p class="card-text">Kathmundu tour</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4">
+                    <div class="card d-flex flex-row">
+                        <img src="./Images/chitwannationalpark.jpg" class="h-100 w-50" alt="chitwannationalpark"
+                            style="height: 100%;">
+                        <div class="card-body">
+                            <p class="card-text">Chitwan national park</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4">
+                    <div class="card d-flex flex-row">
+                        <img src="./Images/beautifulpokhara.jpg" class="h-100 w-50" alt="beautifulpokhara">
+                        <div class="card-body">
+                            <p class="card-text">Beautiful pokhara</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-3">
+        <p class="text-center text-white">Copyright &copy; 2024 Design & Developed by Lijo</p>
+    </footer>
+
+    <script src="./bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+.card img {
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+}
+
+.special {
+    display: flex;
+    flex-direction: row;
+}
+
+.special img {
+    
+    max-width: 100px;
+    height: auto;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+}
+
+.card-img-top {
+    max-width: 150px;
+    height: auto;
+}
+
+.card-body {
+    display: flex-top;
+    align-items: center;
+    padding: 1 rem;
+}
+
+footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 100px;
+    background-color: blueviolet;
+}
+
+.text-center {
+    margin: 0;
+}
+
+.header {
+   background-color: blueviolet;
+   color: white;
+}
+
+.hero {
+    background-image: url(./Images/travel.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    margin-top: 20px;
+}
+
+.nav-link {
+    background-color: blueviolet;
+    color: black;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+}
+
+.form {
+    margin-top: 450px;
+    padding: 50px;
+}
+
+.offers {
+    margin-top: 100px;
+    
+}

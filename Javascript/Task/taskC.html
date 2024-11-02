@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskC</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Task - C</h1>
+
+
+    <script>
+
+                                            //Task - 1
+
+
+    console.log(false == '0');             //true - false normally considered as 0 and the string '0' is considered a 0 so both the values are same.Hence this gives the true as output
+    console.log(false === '0');            //false - "===" checks for the value as well as the type, so the false is boolean type and '0' is a string type, bothe are different.
+    console.log(null == undefined);        //true - here null and undefined are considered as equal
+    console.log(null === undefined);       //false - again here the null is of type object and undefined is of type undefined so the both are not equal     
+
+
+                                            //Task - 2
+
+
+    function generatePyramid(n)
+    {
+        for(let i=1; i <= n; i++){
+            let asterisk = '';
+            let space = '';
+            for(let j = 0; j<n-i; j++){
+                space += ' ';
+            }
+            for(let k = 0; k < (2*i-1); k++){
+                asterisk += '*';
+            }
+            console.log(space + asterisk);
+        }
+    }
+
+    generatePyramid(3);
+
+
+                                            //Task - 3
+
+
+    function deepKeySearch(obj, key)
+    {
+        let ans = [];
+
+        function search(obj){
+            for(let x in obj){
+                if(x === key){
+                    ans.push(obj[x]);
+                }
+                if(typeof obj[x] === 'object' && obj[x] !== null){
+                    search(obj[x]);
+                }
+            }
+        }
+        search(obj);
+        return ans;
+    }
+
+    const data = {
+        name: "John",
+        details: {
+            age: 25,
+            name: "Doe",
+            address: {city: "NY", name: "Home"}}
+    };
+
+    console.log(deepKeySearch(data, 'name'));
+
+    </script>
+    
+</body>
+</html>

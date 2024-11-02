@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Sample Doc</h1>
+
+    <form>
+        <label for="add">Add : </label>
+        <input type="text" id="add" name="add">
+        <input type="submit" value="submit">
+    </form>
+    
+
+    <script>
+        
+        const obj = {
+            a: 10, getA(){
+                return this.a;
+            }
+        };
+
+        const detachedGetA = obj.getA;
+        console.log(detachedGetA());        //output : undefined - detachedGetA function is not pointing to getA function so this.a is not in the detachedGetA()
+
+        // const detachedGetA = obj.getA();    //now this.a will get the value 10 and assign this to a variable detachedGetA and can be called using detachedGetA variable
+        // console.log(detachedGetA;
+        
+        
+        console.log(obj.getA());
+
+        
+        function chunkArray(arr, size)
+        {
+            let ans =[];
+            for(let i = 0; i < arr.length; i+=size){
+                ans.push(arr.slice(i, i+size));
+            }
+            return ans;
+        }
+
+        console.log(chunkArray([1, 2, 3, 4, 5],2));
+
+
+
+        // function memorize(a, b)
+        // {
+        //     const c = a + b;
+        //     return c;
+        // }
+
+        // console.log(memorize(10, 5));
+
+        function chunkArray(arr, size)
+        {
+            let ans =[];
+            for(let i = 0; i < arr.length; i+=size){
+                ans.push(arr.slice(i, i+size));
+            }
+            return ans;
+        }
+
+        console.log(chunkArray([1, 2, 3],2));
+
+
+
+
+
+
+    </script>
+</body>
+</html>

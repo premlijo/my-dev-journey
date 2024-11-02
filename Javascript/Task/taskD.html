@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskD</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Task - D</h1>
+
+
+
+    <script>
+
+                                            //Task - 1
+
+
+        const obj = {
+            a: 10, getA(){
+                return this.a;
+            }
+        };
+
+        const detachedGetA = obj.getA;
+        console.log(detachedGetA());        //output : undefined - detachedGetA function is not pointing to getA function so this.a is not in the detachedGetA()
+
+        // const detachedGetA = obj.getA();    //now this.a will get the value 10 and assign this to a variable detachedGetA and can be called using detachedGetA variable
+        // console.log(detachedGetA;
+        
+        
+        console.log(obj.getA());
+
+        
+                                            //Task - 2
+
+
+
+        function chunkArray(arr, size)
+        {
+            let ans =[];
+            for(let i = 0; i < arr.length; i+=size){
+                ans.push(arr.slice(i, i+size));
+            }
+            return ans;
+        }
+
+        console.log(chunkArray([1, 2, 3, 4, 5],2));
+
+
+
+                                            //Task - 3
+
+
+
+        function memorize(func)
+        {
+            const cache = new Map();
+            return function(a,b){
+                const key = a + ',' + b;
+                if(cache.has(key)){
+                    return cache.get(key);
+                }
+                const result = func(a,b);
+                cache.set(key, result);
+                return result;
+            };
+        }
+
+        function add(a,b){
+            return a + b;
+        }
+        const memorizedadd = memorize(add);
+
+        console.log(memorizedadd(1,2));
+        console.log(memorizedadd(1,2));
+        console.log(memorizedadd(2,3));
+        console.log(memorizedadd(2,3));
+
+        
+    </script>
+    
+</body>
+</html>
