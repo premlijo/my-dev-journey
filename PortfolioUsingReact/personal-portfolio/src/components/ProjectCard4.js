@@ -11,7 +11,7 @@ export const ProjectCard4 = ({title, description, imgUrl, imgUrl2, imgUrlLogo}) 
                 <div className="proj-txtx2">
                     <h4>{title}</h4>
                     <span>{description}</span><br/>
-                    <a href="https://github.com/premlijo/BugTracker-Java" target="blank"><img src={imgUrlLogo}></img></a>
+                    <a href="https://github.com/premlijo/my-dev-journey/tree/main/projects/dynamic-product-form" target="blank"><img src={imgUrlLogo}></img></a>
                 </div>
             </div>
         </Col>

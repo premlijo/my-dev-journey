@@ -60,7 +60,7 @@ export const Projects = () => {
                 <Row>
                     <Col>
                         <h2>Projects</h2>
-                        <p>Lorem</p>
+                        <p>Here are some of my key projects, showcasing skills in Java and React. From building a bug tracking system to designing interactive web applications, these projects reflect my growth as a developer and my focus on creating effective, user-friendly solutions.</p>
                         <Tab.Container id="projects-tabs" defaultActiveKey="first">
                             <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                                 <Nav.Item>

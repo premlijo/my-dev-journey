@@ -48,7 +48,7 @@ export const Banner = () => {
                         <span className="tagline">Welcome to my Portfolio</span>
                         <h1>{`Hi I'm Prem Lijo `}<br /><span className="wrap">{text}</span></h1>
                         <p>I'm an aspiring software developer currently working as a Software Developer Intern at Yoho Technologies Private Limited, transitioning from my previous role as a process associate. Passionate about coding and problem-solving, I'm excited to dive deeper into software development and learn from hands-on experiences. I'm eager to contribute, grow my skills in Software Development, and make a positive impact in the tech industry.</p>
-                        <button onClick={() => console.log('connect')}>Let's connect<ArrowRightCircle size={25} /></button>
+                        <button onClick={() => window.location.href = "mailto:lijo.official24@gmail.com"}>Let's connect<ArrowRightCircle size={25} /></button>
                     </Col>
                     <Col xs={12} md={6} xl={5} className="header-container">
                         <img src={headerImg} alt="Header Image" className="photo-img" />

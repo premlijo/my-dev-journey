@@ -42,14 +42,15 @@ export const NavBar = () => {
             <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={ () => onUpdateActiveLink('home')}>Home</Nav.Link>
             <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={ () => onUpdateActiveLink('skills')}>Skills</Nav.Link>
             <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={ () => onUpdateActiveLink('projects')}>Projects</Nav.Link>
+            <Nav.Link href="#connect" className={activeLink === 'connect' ? 'active navbar-link' : 'navbar-link'} onClick={ () => onUpdateActiveLink('connect')}>Contact</Nav.Link>
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
-                <a href="#"><img src={ navIcon1 } alt="" /></a>
-                <a href="#"><img src={ navIcon2 } alt="" className="icon2"/></a>
-                <a href="#"><img src={ navIcon3 } alt="" className="icon3"/></a>
+                <a href="https://www.linkedin.com/in/premlijo/"><img src={ navIcon1 } alt="LinkedIn" /></a>
+                <a href="https://github.com/premlijo"><img src={ navIcon2 } alt="GitHub" className="icon2"/></a>
+                <a href="https://leetcode.com/u/premlijo/"><img src={ navIcon3 } alt="Leetcode" className="icon3"/></a>
             </div>
-            <button className="vvd" onClick={() => console.log('connect')}><span>Let's Connect</span></button>
+            <button className="vvd" onClick={() =>  window.location.href = "mailto:lijo.official24@gmail.com"}><span>Let's Connect</span></button>
           </span>
         </Navbar.Collapse>
       </Container>
